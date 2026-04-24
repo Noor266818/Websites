@@ -9,7 +9,7 @@ body {
   color: #1d2b22;
 }
 
-/* ================= NAVBAR ================= */
+/* == NAVBAR ==
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -45,7 +45,7 @@ body {
   color: #4a8f72;
 }
 
-/* ================= HOME ================= */
+/* == HOME ==*/
 .home {
   height: 100vh;
 }
@@ -99,7 +99,7 @@ body {
   animation-delay: 12s;
 }
 
-/* FADE ANIMATION */
+/* ANIMATION */
 @keyframes fade {
   0% {opacity: 0;}
   10% {opacity: 1;}
@@ -108,7 +108,7 @@ body {
   100% {opacity: 0;}
 }
 
-/* OVERLAY CONTENT */
+/* OVERLAY */
 .overlay {
   position: absolute;
   top: 50%;
@@ -149,7 +149,7 @@ body {
   transform: translateY(-3px);
 }
 
-/* ================= ABOUT ================= */
+/*== ABOUT ==*/
 .about-section {
   padding: 70px 40px;
   text-align: center;
@@ -180,7 +180,7 @@ body {
   transform: translateY(-6px);
 }
 
-/* ================= GALLERY ================= */
+/* === GALLERY ==== */
 .gallery-section {
   padding: 70px 40px;
   text-align: center;
@@ -228,7 +228,7 @@ body {
   font-weight: bold;
 }
 
-/* ================= BUY ================= */
+/* ===BUY === */
 .buy-section {
   background: #e9f5ee;
   padding: 70px 40px;
@@ -259,7 +259,7 @@ body {
   cursor: pointer;
 }
 
-/* ================= RESPONSIVE ================= */
+/* === RESPONSIVE === */
 @media(max-width: 900px) {
   .about-grid,
   .gallery-grid {
@@ -294,6 +294,7 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* === Footer === */
 .footer {
     text-align: center;
     padding: 20px;
