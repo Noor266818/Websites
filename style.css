@@ -9,7 +9,7 @@ body {
   color: #1d2b22;
 }
 
-/* == NAVBAR ==
+/* === NavBar === */
 .navbar {
   display: flex;
   justify-content: space-between;
