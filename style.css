@@ -1,0 +1,304 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f4fbf6;
+  color: #1d2b22;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: linear-gradient(90deg, #cfead6, #a8d5ba);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: #2f5d50;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #1d2b22;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #4a8f72;
+}
+
+/* ================= HOME ================= */
+.home {
+  height: 100vh;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* DARK OVERLAY */
+.slider::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.35);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* SLIDES */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: fade 16s infinite;
+}
+
+/* 🔥 HOME IMAGES FROM YOUR GALLERY */
+.s1 {
+  background: url('images/pic1.jpg') center/cover;
+  animation-delay: 0s;
+}
+
+.s2 {
+  background: url('images/horse.jpg') center/cover;
+  animation-delay: 4s;
+}
+
+.s3 {
+  background: url('images/truck_art.jpg') center/cover;
+  animation-delay: 8s;
+}
+
+.s4 {
+  background: url('images/indonessian_art.jpg') center/cover;
+  animation-delay: 12s;
+}
+
+/* FADE ANIMATION */
+@keyframes fade {
+  0% {opacity: 0;}
+  10% {opacity: 1;}
+  25% {opacity: 1;}
+  35% {opacity: 0;}
+  100% {opacity: 0;}
+}
+
+/* OVERLAY CONTENT */
+.overlay {
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  transform: translateY(-50%);
+  color: white;
+  max-width: 450px;
+  z-index: 2;
+}
+
+.overlay h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 46px;
+  margin: 0;
+  text-shadow: 0 5px 20px rgba(0,0,0,0.7);
+}
+
+.overlay p {
+  font-size: 15px;
+  margin: 12px 0;
+  line-height: 1.6;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.6);
+}
+
+/* BUTTON */
+.explore-btn {
+  display: inline-block;
+  background: #4a8f72;
+  color: white;
+  text-decoration: none;
+  padding: 12px 26px;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+.explore-btn:hover {
+  background: #3b6f59;
+  transform: translateY(-3px);
+}
+
+/* ================= ABOUT ================= */
+.about-section {
+  padding: 70px 40px;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-family: 'Playfair Display', serif;
+  color: #2f5d50;
+  font-size: 32px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.about-card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+  transition: 0.3s;
+}
+
+.about-card:hover {
+  transform: translateY(-6px);
+}
+
+/* ================= GALLERY ================= */
+.gallery-section {
+  padding: 70px 40px;
+  text-align: center;
+}
+
+.gallery-section h2 {
+  font-family: 'Playfair Display', serif;
+  color: #2f5d50;
+  font-size: 32px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.card {
+  background: white;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card img {
+  width: 100%;
+  height: 260px; /* increased */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  color: #2f5d50;
+}
+
+.card p {
+  color: #4a8f72;
+  font-weight: bold;
+}
+
+/* ================= BUY ================= */
+.buy-section {
+  background: #e9f5ee;
+  padding: 70px 40px;
+  text-align: center;
+}
+
+.buy-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  margin: auto;
+  gap: 12px;
+}
+
+.buy-form input,
+.buy-form textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #b7d6c4;
+}
+
+.buy-form button {
+  background: #4a8f72;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width: 900px) {
+  .about-grid,
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .overlay {
+    right: 5%;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .overlay h1 {
+    font-size: 28px;
+  }
+
+  .about-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #184a14;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
