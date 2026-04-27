@@ -9,7 +9,7 @@ body {
   color: #1d2b22;
 }
 
-/* === NavBar === */
+/* ================= NAVBAR ================= */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -45,7 +45,7 @@ body {
   color: #4a8f72;
 }
 
-/* == HOME ==*/
+/* ================= HOME SLIDER ================= */
 .home {
   height: 100vh;
 }
@@ -57,7 +57,6 @@ body {
   overflow: hidden;
 }
 
-/* DARK OVERLAY */
 .slider::after {
   content: "";
   position: absolute;
@@ -69,7 +68,6 @@ body {
   z-index: 1;
 }
 
-/* SLIDES */
 .slide {
   position: absolute;
   width: 100%;
@@ -78,28 +76,11 @@ body {
   animation: fade 16s infinite;
 }
 
-/* HOME IMAGES */
-.s1 {
-  background: url('images/pic1.jpg') center/cover;
-  animation-delay: 0s;
-}
+.s1 { background: url('images/pic1.jpg') center/cover; animation-delay: 0s; }
+.s2 { background: url('images/horse.jpg') center/cover; animation-delay: 4s; }
+.s3 { background: url('images/truck_art.jpg') center/cover; animation-delay: 8s; }
+.s4 { background: url('images/indonessian_art.jpg') center/cover; animation-delay: 12s; }
 
-.s2 {
-  background: url('images/horse.jpg') center/cover;
-  animation-delay: 4s;
-}
-
-.s3 {
-  background: url('images/truck_art.jpg') center/cover;
-  animation-delay: 8s;
-}
-
-.s4 {
-  background: url('images/indonessian_art.jpg') center/cover;
-  animation-delay: 12s;
-}
-
-/* ANIMATION */
 @keyframes fade {
   0% {opacity: 0;}
   10% {opacity: 1;}
@@ -108,7 +89,7 @@ body {
   100% {opacity: 0;}
 }
 
-/* OVERLAY */
+/* ================= OVERLAY ================= */
 .overlay {
   position: absolute;
   top: 50%;
@@ -123,33 +104,29 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 46px;
   margin: 0;
-  text-shadow: 0 5px 20px rgba(0,0,0,0.7);
 }
 
 .overlay p {
   font-size: 15px;
   margin: 12px 0;
   line-height: 1.6;
-  text-shadow: 0 3px 10px rgba(0,0,0,0.6);
 }
 
-/* BUTTON */
 .explore-btn {
-  display: inline-block;
   background: #4a8f72;
   color: white;
-  text-decoration: none;
   padding: 12px 26px;
   border-radius: 30px;
+  border: none;
+  cursor: pointer;
   transition: 0.3s;
 }
 
 .explore-btn:hover {
   background: #3b6f59;
-  transform: translateY(-3px);
 }
 
-/*== ABOUT ==*/
+/* ================= ABOUT ================= */
 .about-section {
   padding: 70px 40px;
   text-align: center;
@@ -180,7 +157,7 @@ body {
   transform: translateY(-6px);
 }
 
-/* === GALLERY ==== */
+/* ================= GALLERY ================= */
 .gallery-section {
   padding: 70px 40px;
   text-align: center;
@@ -205,6 +182,7 @@ body {
   border-radius: 12px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.06);
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .card:hover {
@@ -213,7 +191,7 @@ body {
 
 .card img {
   width: 100%;
-  height: 260px; /* increased */
+  height: 260px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -228,18 +206,49 @@ body {
   font-weight: bold;
 }
 
-/* ===BUY === */
+/* ================= BUY PAGE ================= */
 .buy-section {
   background: #e9f5ee;
   padding: 70px 40px;
   text-align: center;
 }
 
+.buy-section h2 {
+  font-family: 'Playfair Display', serif;
+  color: #2f5d50;
+}
+
+.buy-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* ASIDE PRODUCT PREVIEW */
+.product-preview {
+  width: 280px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.product-preview img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* FORM */
 .buy-form {
   display: flex;
   flex-direction: column;
-  max-width: 450px;
-  margin: auto;
+  width: 300px;
   gap: 12px;
 }
 
@@ -259,7 +268,16 @@ body {
   cursor: pointer;
 }
 
-/* === RESPONSIVE === */
+/* ================= FOOTER ================= */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #184a14;
+  color: white;
+  font-size: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
 @media(max-width: 900px) {
   .about-grid,
   .gallery-grid {
@@ -268,7 +286,6 @@ body {
 }
 
 @media(max-width: 768px) {
-
   .navbar {
     flex-direction: column;
     gap: 10px;
@@ -293,13 +310,4 @@ body {
   .gallery-grid {
     grid-template-columns: 1fr;
   }
-}
-/* === Footer === */
-.footer {
-    text-align: center;
-    padding: 20px;
-    background: #184a14;
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
 }
