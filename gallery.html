@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery - Galerie Nova</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="logo">Galerie Nova</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="buy.html">Buy</a>
+  </div>
+</nav>
+
+<section class="gallery-section">
+  <h2>Featured Artworks</h2>
+
+  <div class="gallery-grid">
+
+    <div class="card" onclick="goToBuy('Jhon Singer Sargent','images/pic1.jpg','$1200')">
+      <img src="images/pic1.jpg">
+      <h3>Jhon Singer Sargent</h3>
+      <p>$1200</p>
+    </div>
+
+    <div class="card" onclick="goToBuy('Horse Painting','images/horse.jpg','$950')">
+      <img src="images/horse.jpg">
+      <h3>Horse Painting</h3>
+      <p>$950</p>
+    </div>
+
+    <div class="card" onclick="goToBuy('Truck Art','images/truck_art.jpg','$1500')">
+      <img src="images/truck_art.jpg">
+      <h3>Truck Art</h3>
+      <p>$1500</p>
+    </div>
+
+    <div class="card" onclick="goToBuy('Indonesian Art','images/indonessian_art.jpg','$1100')">
+      <img src="images/indonessian_art.jpg">
+      <h3>Indonesian Art</h3>
+      <p>$1100</p>
+    </div>
+
+    <div class="card" onclick="goToBuy('Modern Art','images/pic3.jpg','$1350')">
+      <img src="images/pic3.jpg">
+      <h3>Modern Art</h3>
+      <p>$1350</p>
+    </div>
+
+    <div class="card" onclick="goToBuy('Masterpiece','images/pic4.jpg','$990')">
+      <img src="images/pic4.jpg">
+      <h3>Masterpiece</h3>
+      <p>$990</p>
+    </div>
+
+    <div class="card" onclick="goToBuy('Master Piece','images/pic5.jpg','$1250')">
+      <img src="images/pic5.jpg">
+      <h3>Master Piece</h3>
+      <p>$1250</p>
+    </div>
+
+    <div class="card" onclick="goToBuy('Flower Art','images/flower.jpg','$1400')">
+      <img src="images/flower.jpg">
+      <h3>Flower Art</h3>
+      <p>$1400</p>
+    </div>
+
+    <div class="card" onclick="goToBuy('Nature','images/itlay_Nature.jpg','$1000')">
+      <img src="images/itlay_Nature.jpg">
+      <h3>Nature</h3>
+      <p>$1000</p>
+    </div>
+
+  </div>
+</section>
+
+<script>
+function goToBuy(name, img, price) {
+  const url = `buy.html?name=${encodeURIComponent(name)}&img=${encodeURIComponent(img)}&price=${encodeURIComponent(price)}`;
+  window.location.href = url;
+}
+</script>
+
+</body>
+</html>
