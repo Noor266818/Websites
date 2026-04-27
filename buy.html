@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buy - Galerie Nova</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">Galerie Nova</div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="buy.html">Buy</a>
+  </div>
+</nav>
+
+<!-- BUY SECTION -->
+<section class="buy-section">
+
+  <h2>Buy Artwork</h2>
+
+  <div class="buy-container">
+
+    <!-- PRODUCT PREVIEW -->
+    <aside class="product-preview">
+      <img id="productImage" src="" alt="Selected Product">
+      <h3 id="productTitle"></h3>
+      <p id="productPrice"></p>
+    </aside>
+
+    <!-- FORM -->
+    <form class="buy-form" onsubmit="handleForm(event)">
+
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="text" id="productInput" placeholder="Product Name" required>
+      <textarea placeholder="Message"></textarea>
+
+      <button type="submit">Buy Now</button>
+    </form>
+
+  </div>
+
+  <!-- SUCCESS MESSAGE (hidden first) -->
+  <div id="successBox" class="success-box">
+    <h2>🎉 Order Placed!</h2>
+    <p>Your order has been successfully placed.</p>
+    <p>Thanks for visiting <b>Galerie Nova</b> ❤️</p>
+  </div>
+
+</section>
+
+<!-- JS -->
+<script>
+// get data from URL
+const params = new URLSearchParams(window.location.search);
+
+const name = params.get('name');
+const img = params.get('img');
+const price = params.get('price');
+
+// show selected product
+if (name && img && price) {
+  document.getElementById('productImage').src = img;
+  document.getElementById('productTitle').innerText = name;
+  document.getElementById('productPrice').innerText = price;
+  document.getElementById('productInput').value = name;
+}
+
+// after form submit
+function handleForm(e) {
+  e.preventDefault();
+
+  // hide form
+  document.querySelector(".buy-form").style.display = "none";
+
+  // show success message
+  document.getElementById("successBox").style.display = "block";
+}
+</script>
+
+</body>
+</html>
